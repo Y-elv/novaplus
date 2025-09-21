@@ -1,0 +1,641 @@
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/about-bg.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 70px;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header .divider {
+    width: 80px;
+    height: 3px;
+    background-color: #4a6fa5;
+    margin: 15px auto 20px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Our Story */
+.our-story {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.story-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.story-content:hover .story-image img {
+    transform: scale(1.05);
+}
+
+.story-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.story-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.milestones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.milestone {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.milestone .number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4a6fa5;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.milestone .label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mission, .vision {
+    position: relative;
+    text-align: center;
+    padding: 50px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4a6fa5;
+}
+
+.mission .icon, .vision .icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(74, 111, 165, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+}
+
+.mission:hover .icon, .vision:hover .icon {
+    background-color: #4a6fa5;
+    transform: rotate(360deg);
+}
+
+.mission i, .vision i {
+    font-size: 2rem;
+    color: #4a6fa5;
+    transition: all 0.3s ease;
+}
+
+.mission:hover i, .vision:hover i {
+    color: #fff;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+.mission p, .vision p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Our Values */
+.our-values {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4a6fa5;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(74, 111, 165, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    background-color: #4a6fa5;
+    transform: rotate(360deg);
+}
+
+.value-icon i {
+    font-size: 1.8rem;
+    color: #4a6fa5;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon i {
+    color: #fff;
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2d3436;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Our Team */
+.our-team {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.05);
+}
+
+.social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .social-links {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    color: #4a6fa5;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #4a6fa5;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.member-info {
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.member-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #2d3436;
+}
+
+.member-info .position {
+    color: #4a6fa5;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.member-info .bio {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.join-team {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    background: #f0f4f9;
+    border-radius: 10px;
+}
+
+.join-team h3 {
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-bottom: 15px;
+}
+
+.join-team p {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+}
+
+.join-team a {
+    color: #4a6fa5;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.join-team a:hover {
+    color: #3a5a80;
+    text-decoration: underline;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.testimonial-slider {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin: 0 15px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: rgba(74, 111, 165, 0.1);
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    z-index: 0;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #4a6fa5;
+}
+
+.author-info h4 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+.author-info p {
+    margin: 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.testimonial-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.testimonial-cta p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #4a6fa5, #6c5ce7);
+    color: #fff;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #4a6fa5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .story-content {
+        flex-direction: column;
+    }
+    
+    .story-image, .story-text {
+        width: 100%;
+    }
+    
+    .milestone {
+        min-width: calc(50% - 20px);
+    }
+    
+    .mission, .vision {
+        margin-bottom: 30px;
+    }
+    
+    .mission-vision::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .testimonial {
+        padding: 30px 20px;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .client-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .milestone {
+        min-width: 100%;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}

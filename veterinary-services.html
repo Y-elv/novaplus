@@ -1,0 +1,616 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary Services - Novaplus Veterinary Pet Ltd</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Novaplus <span>Veterinary</span></h1>
+                <p>Pet Care & Supplies</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pet-shop.html">Pet Shop</a></li>
+                    <li><a href="veterinary-services.html" class="active">Veterinary Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Veterinary Services</h1>
+            <p>Comprehensive healthcare services for your beloved pets</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Our Veterinary Services</h2>
+                <p>At Novaplus Veterinary, we provide a wide range of veterinary services to keep your pets healthy and happy. Our experienced veterinarians and staff are dedicated to delivering the highest standard of care in a compassionate and friendly environment.</p>
+            </div>
+
+            <div class="services-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="preventive">Preventive Care</button>
+                    <button class="tab-btn" data-tab="medical">Medical Services</button>
+                    <button class="tab-btn" data-tab="surgical">Surgical Services</button>
+                    <button class="tab-btn" data-tab="emergency">Emergency Care</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- Preventive Care Tab -->
+                    <div class="tab-pane active" id="preventive">
+                        <div class="service-details">
+                            <div class="service-image">
+                                <img src="images/preventive-care.jpg" alt="Preventive Care">
+                            </div>
+                            <div class="service-info">
+                                <h3>Preventive Care</h3>
+                                <p>Regular preventive care is essential for maintaining your pet's health and detecting potential issues before they become serious. Our preventive services include:</p>
+                                
+                                <div class="service-features">
+                                    <div class="feature">
+                                        <i class="fas fa-syringe"></i>
+                                        <div>
+                                            <h4>Vaccinations</h4>
+                                            <p>Core and non-core vaccinations to protect against common diseases</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-stethoscope"></i>
+                                        <div>
+                                            <h4>Wellness Exams</h4>
+                                            <p>Comprehensive physical examinations to assess overall health</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-bug"></i>
+                                        <div>
+                                            <h4>Parasite Control</h4>
+                                            <p>Prevention and treatment for fleas, ticks, heartworms, and intestinal parasites</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-tooth"></i>
+                                        <div>
+                                            <h4>Dental Care</h4>
+                                            <p>Dental cleanings, oral exams, and home care recommendations</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-weight"></i>
+                                        <div>
+                                            <h4>Nutritional Counseling</h4>
+                                            <p>Personalized diet plans and nutritional advice for your pet's needs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a href="#appointment" class="btn btn-primary">Schedule an Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Medical Services Tab -->
+                    <div class="tab-pane" id="medical">
+                        <div class="service-details">
+                            <div class="service-image">
+                                <img src="images/medical-services.jpg" alt="Medical Services">
+                            </div>
+                            <div class="service-info">
+                                <h3>Medical Services</h3>
+                                <p>When your pet is sick or injured, our veterinary team is here to provide expert medical care with compassion and expertise.</p>
+                                
+                                <div class="service-features">
+                                    <div class="feature">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <div>
+                                            <h4>Diagnostics</h4>
+                                            <p>Advanced diagnostic testing including blood work, urinalysis, and digital imaging</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-pills"></i>
+                                        <div>
+                                            <h4>Internal Medicine</h4>
+                                            <p>Diagnosis and treatment of complex medical conditions</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-allergies"></i>
+                                        <div>
+                                            <h4>Dermatology</h4>
+                                            <p>Treatment for skin conditions, allergies, and ear infections</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-bone"></i>
+                                        <div>
+                                            <h4>Orthopedics</h4>
+                                            <p>Care for bone, joint, and muscle conditions</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-eye"></i>
+                                        <div>
+                                            <h4>Ophthalmology</h4>
+                                            <p>Eye exams and treatment for ocular conditions</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a href="#appointment" class="btn btn-primary">Schedule an Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Surgical Services Tab -->
+                    <div class="tab-pane" id="surgical">
+                        <div class="service-details">
+                            <div class="service-image">
+                                <img src="images/surgical-services.jpg" alt="Surgical Services">
+                            </div>
+                            <div class="service-info">
+                                <h3>Surgical Services</h3>
+                                <p>Our state-of-the-art surgical suite and experienced veterinary surgeons ensure your pet receives the highest quality surgical care.</p>
+                                
+                                <div class="service-features">
+                                    <div class="feature">
+                                        <i class="fas fa-cut"></i>
+                                        <div>
+                                            <h4>Spay & Neuter</h4>
+                                            <p>Routine and advanced spay/neuter procedures</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-bone"></i>
+                                        <div>
+                                            <h4>Soft Tissue Surgery</h4>
+                                            <p>Procedures involving skin, organs, and other soft tissues</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-bone"></i>
+                                        <div>
+                                            <h4>Orthopedic Surgery</h4>
+                                            <p>Treatment for fractures, ligament injuries, and joint conditions</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-teeth"></i>
+                                        <div>
+                                            <h4>Dental Surgery</h4>
+                                            <p>Tooth extractions and oral surgery procedures</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-heart"></i>
+                                        <div>
+                                            <h4>Anesthesia & Monitoring</h4>
+                                            <p>Safe anesthesia protocols and continuous monitoring during procedures</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <a href="#appointment" class="btn btn-primary">Schedule an Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Emergency Care Tab -->
+                    <div class="tab-pane" id="emergency">
+                        <div class="service-details">
+                            <div class="service-image">
+                                <img src="images/emergency-care.jpg" alt="Emergency Care">
+                            </div>
+                            <div class="service-info">
+                                <h3>Emergency Care</h3>
+                                <p>We provide emergency veterinary care during our regular business hours. For after-hours emergencies, please contact our emergency line.</p>
+                                
+                                <div class="emergency-info">
+                                    <div class="emergency-contact">
+                                        <h4>Emergency Contact</h4>
+                                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                                        <p><i class="fas fa-clock"></i> Available 24/7 for existing patients</p>
+                                    </div>
+                                    
+                                    <div class="emergency-signs">
+                                        <h4>Signs Your Pet Needs Emergency Care:</h4>
+                                        <ul>
+                                            <li>Difficulty breathing or excessive coughing</li>
+                                            <li>Severe bleeding or trauma</li>
+                                            <li>Seizures or loss of consciousness</li>
+                                            <li>Bloated or distended abdomen</li>
+                                            <li>Inability to urinate or defecate</li>
+                                            <li>Ingestion of toxic substances</li>
+                                            <li>Sudden paralysis or inability to stand</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="emergency-actions">
+                                    <a href="tel:+15551234567" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i> Call Emergency Line
+                                    </a>
+                                    <a href="#appointment" class="btn btn-secondary">Schedule Non-Emergency Visit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Novaplus Veterinary?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Experienced Veterinarians</h3>
+                    <p>Our team of licensed veterinarians has years of experience in providing exceptional care for pets of all shapes and sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Compassionate Care</h3>
+                    <p>We treat every pet as if they were our own, with kindness, respect, and the highest standard of care.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Advanced Technology</h3>
+                    <p>Our clinic is equipped with state-of-the-art diagnostic and treatment equipment to ensure accurate diagnoses and effective treatments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Comfortable Environment</h3>
+                    <p>We've designed our clinic to be a calm, welcoming space that reduces stress for both pets and their owners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section" id="appointment">
+        <div class="container">
+            <div class="appointment-container">
+                <div class="appointment-info">
+                    <h2>Schedule an Appointment</h2>
+                    <p>Book a visit with one of our experienced veterinarians today. We'll get back to you shortly to confirm your appointment.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>appointments@novaplusvet.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <p>Mon-Fri: 8:00 AM - 8:00 PM<br>
+                                Sat: 9:00 AM - 6:00 PM<br>
+                                Sun: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="appointment-form">
+                    <h3>Request an Appointment</h3>
+                    <form id="appointment-form" onsubmit="return handleAppointmentForm(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-name">Pet's Name *</label>
+                            <input type="text" id="pet-name" name="pet-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-type">Pet Type *</label>
+                            <select id="pet-type" name="pet-type" required>
+                                <option value="">Select Pet Type</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="bird">Bird</option>
+                                <option value="small-mammal">Small Mammal</option>
+                                <option value="reptile">Reptile</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <optgroup label="Preventive Care">
+                                    <option value="wellness-exam">Wellness Exam</option>
+                                    <option value="vaccinations">Vaccinations</option>
+                                    <option value="dental-cleaning">Dental Cleaning</option>
+                                    <option value="parasite-control">Parasite Control</option>
+                                </optgroup>
+                                <optgroup label="Medical Services">
+                                    <option value="sick-visit">Sick Pet Exam</option>
+                                    <option value="allergy-testing">Allergy Testing</option>
+                                    <option value="blood-work">Blood Work</option>
+                                    <option value="xray-ultrasound">X-ray/Ultrasound</option>
+                                </optgroup>
+                                <optgroup label="Surgical Services">
+                                    <option value="spay-neuter">Spay/Neuter</option>
+                                    <option value="dental-surgery">Dental Surgery</option>
+                                    <option value="soft-tissue-surgery">Soft Tissue Surgery</option>
+                                    <option value="orthopedic-surgery">Orthopedic Surgery</option>
+                                </optgroup>
+                                <option value="other">Other (please specify in notes)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select Time</option>
+                                    <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                    <option value="afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                                    <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes</label>
+                            <textarea id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How often should my pet have a check-up? 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We recommend annual wellness exams for most adult pets. Puppies, kittens, senior pets, and pets with health conditions may need more frequent visits. Your veterinarian will recommend the best schedule for your pet's specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What vaccinations does my pet need? 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Core vaccinations for dogs typically include rabies, distemper, parvovirus, and adenovirus. For cats, core vaccines are rabies, feline distemper, and feline herpesvirus. Additional vaccines may be recommended based on your pet's lifestyle and risk factors.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I tell if my pet is in pain? 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pets often hide pain, but signs may include decreased activity, reluctance to jump or climb stairs, decreased appetite, excessive licking of a body part, changes in behavior, or vocalizing. If you suspect your pet is in pain, please contact us.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What should I do in case of an emergency? 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If it's during our regular hours, call us immediately at (555) 123-4567. For after-hours emergencies, please call our emergency line. If your pet is experiencing severe trauma, difficulty breathing, seizures, or other life-threatening conditions, bring them in immediately.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer payment plans? 
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods including cash, credit cards, and pet insurance. We also work with third-party financing options like CareCredit. Please contact us for more information about payment options.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-contact">
+                <p>Have more questions? <a href="contact.html">Contact us</a> and we'll be happy to help!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Novaplus Veterinary</h3>
+                    <p>Your trusted partner in pet care and veterinary services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pet-shop.html">Pet Shop</a></li>
+                        <li><a href="veterinary-services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="veterinary-services.html#preventive">Preventive Care</a></li>
+                        <li><a href="veterinary-services.html#medical">Medical Services</a></li>
+                        <li><a href="veterinary-services.html#surgical">Surgical Services</a></li>
+                        <li><a href="veterinary-services.html#emergency">Emergency Care</a></li>
+                        <li><a href="pet-shop.html">Pet Supplies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Pet Care St, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@novaplusvet.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const item = this.parentNode;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+            
+            // Set minimum date for appointment to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').setAttribute('min', today);
+        });
+        
+        // Handle appointment form submission
+        function handleAppointmentForm(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const form = e.target;
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+            
+            // In a real application, you would send this data to your server
+            const formData = new FormData(form);
+            const formProps = Object.fromEntries(formData);
+            
+            // Show success message
+            alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
+            
+            // Reset form
+            form.reset();
+            
+            return false;
+        }
+    </script>
+</body>
+</html>
