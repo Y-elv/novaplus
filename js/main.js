@@ -70,24 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close mobile menu when clicking on a nav link
     if (nav) {
-        nav.addEventListener('click', (event) => {
-            const clickedLink = event.target.closest('a');
-            if (!clickedLink) return;
-
-            const href = clickedLink.getAttribute('href') || '';
-            const isHashLink = href.startsWith('#');
-
-            // On small screens, close the drawer first and then navigate reliably.
-            if (window.innerWidth <= 768 && !isHashLink && href) {
-                event.preventDefault();
+        nav.querySelectorAll('a[href]').forEach((navLink) => {
+            navLink.addEventListener('click', () => {
+                // Keep default browser navigation exactly like desktop.
+                // We only close menu UI state when a link is tapped.
                 closeMobileMenu();
-                window.setTimeout(() => {
-                    window.location.assign(clickedLink.href);
-                }, 180);
-                return;
-            }
-
-            closeMobileMenu();
+            });
         });
     }
 
