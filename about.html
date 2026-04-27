@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Novaplus Veterinary Pet Ltd</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,15 +13,19 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>Novaplus <span>Veterinary</span></h1>
-                <p>Pet Care & Supplies</p>
-            </div>
+            <a class="logo" href="index.html" aria-label="Novaplus home">
+                <img class="logo-image" src="images/logo.png" alt="Novaplus logo">
+                <div class="logo-text">
+                    <h1>Novaplus <span>Veterinary</span></h1>
+                    <p>Pet Care & Supplies</p>
+                </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="pet-shop.html">Pet Shop</a></li>
                     <li><a href="veterinary-services.html">Veterinary Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html" class="active">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -407,7 +412,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+                <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-service.html">Terms of Service</a>

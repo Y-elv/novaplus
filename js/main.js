@@ -2,19 +2,97 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu');
     const nav = document.querySelector('nav');
+    const body = document.body;
+    let navBackdrop = null;
+
+    function closeMobileMenu() {
+        if (!nav || !mobileMenuBtn) return;
+        nav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        body.classList.remove('menu-open');
+        if (navBackdrop) {
+            navBackdrop.classList.remove('active');
+        }
+    }
+
+    function openMobileMenu() {
+        if (!nav || !mobileMenuBtn) return;
+        nav.classList.add('active');
+        mobileMenuBtn.classList.add('active');
+        body.classList.add('menu-open');
+        if (navBackdrop) {
+            navBackdrop.classList.add('active');
+        }
+    }
     
     if (mobileMenuBtn) {
+        navBackdrop = document.createElement('div');
+        navBackdrop.className = 'nav-backdrop';
+        body.appendChild(navBackdrop);
+
+        navBackdrop.addEventListener('click', closeMobileMenu);
+
         mobileMenuBtn.addEventListener('click', function() {
-            nav.classList.toggle('active');
+            const isActive = nav && nav.classList.contains('active');
+            if (isActive) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
         });
     }
 
     // Close mobile menu when clicking on a nav link
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
+    if (nav) {
+        nav.addEventListener('click', (event) => {
+            const clickedLink = event.target.closest('a');
+            if (!clickedLink) return;
+
+            const href = clickedLink.getAttribute('href') || '';
+            const isHashLink = href.startsWith('#');
+
+            // On small screens, close the drawer first and then navigate reliably.
+            if (window.innerWidth <= 768 && !isHashLink && href) {
+                event.preventDefault();
+                closeMobileMenu();
+                window.setTimeout(() => {
+                    window.location.assign(clickedLink.href);
+                }, 180);
+                return;
+            }
+
+            closeMobileMenu();
         });
+    }
+
+    // Close menu with Escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+
+    // Make logo a Home/Landing navigation target on every page
+    const logo = document.querySelector('.logo');
+    if (logo && !logo.closest('a')) {
+        logo.setAttribute('role', 'link');
+        logo.setAttribute('tabindex', '0');
+        logo.setAttribute('aria-label', 'Go to homepage');
+        logo.addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+        logo.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                window.location.href = 'index.html';
+            }
+        });
+    }
+
+    // Always show current year in footer labels
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.current-year').forEach((yearElement) => {
+        yearElement.textContent = String(currentYear);
     });
 
     // Sticky header on scroll
@@ -47,30 +125,34 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 1,
             name: 'Premium Dog Food',
-            price: '29.99',
-            image: 'images/dog-food.jpg',
-            category: 'Food & Treats'
+            price: '18,000',
+            image: 'images/premium%20dog%20food%20.png',
+            category: 'Food & Treats',
+            link: 'pet-shop.html?category=food'
         },
         {
             id: 2,
             name: 'Cat Litter Box',
-            price: '24.99',
-            image: 'images/cat-litter.jpg',
-            category: 'Accessories'
+            price: '12,500',
+            image: 'images/cart%20little%20box%20.jpg',
+            category: 'Accessories',
+            link: 'pet-shop.html?category=accessories'
         },
         {
             id: 3,
             name: 'Dog Leash',
-            price: '15.99',
-            image: 'images/dog-leash.jpg',
-            category: 'Collars & Leashes'
+            price: '9,000',
+            image: 'images/dog%20leash.avif',
+            category: 'Collars & Leashes',
+            link: 'pet-shop.html?category=accessories'
         },
         {
             id: 4,
             name: 'Pet Grooming Kit',
-            price: '34.99',
-            image: 'images/grooming-kit.jpg',
-            category: 'Grooming'
+            price: '22,000',
+            image: 'images/grooming%20kit.avif',
+            category: 'Grooming',
+            link: 'pet-shop.html?category=grooming'
         }
     ];
 
@@ -112,8 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="product-info">
                     <span class="category">${product.category}</span>
                     <h3>${product.name}</h3>
-                    <div class="price">$${product.price}</div>
-                    <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
+                    <div class="price">RWF ${product.price}</div>
+                    <a class="btn btn-primary" href="${product.link}">View Product</a>
                 </div>
             `;
             productsGrid.appendChild(productElement);

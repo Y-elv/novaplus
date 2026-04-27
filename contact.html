@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Novaplus Veterinary Pet Ltd</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Novaplus home">
+                <img class="logo-image" src="images/logo.png" alt="Novaplus logo">
+                <div class="logo-text">
+                    <h1>Novaplus <span>Veterinary</span></h1>
+                    <p>Pet Care & Supplies</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pet-shop.html">Pet Shop</a></li>
+                    <li><a href="veterinary-services.html">Veterinary Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header" style="margin-top: 70px; background: var(--light-gray);">
+        <div class="container">
+            <h1>Contact Novaplus Veterinary Pet Ltd</h1>
+            <p>Please let us know how we can help you.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;">
+                <div class="service-card" style="text-align:left;">
+                    <h3>Our Contacts</h3>
+                    <p><strong>Pet Shop Tel:</strong> 0788407116</p>
+                    <p><strong>Veterinarian Tel:</strong> 0787082975</p>
+                    <p><strong>Email:</strong> info@novaplusvet.com</p>
+                    <p><strong>Working Hours:</strong> 09:00 AM - 08:00 PM</p>
+                    <p><strong>Location:</strong> KG 1 AVE</p>
+                    <p><strong>Road:</strong> Chez Lando - Sonatube</p>
+                    <p><strong>Near:</strong> Polyclinic de l'etoile</p>
+                </div>
+
+                <div class="service-card" style="text-align:left;">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required style="width:100%;padding:10px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required style="width:100%;padding:10px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" style="width:100%;padding:10px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required style="width:100%;padding:10px;">
+                                <option value="">Select one</option>
+                                <option value="Pet Shop">Pet Shop</option>
+                                <option value="Home Veterinary Services">Home Veterinary Services</option>
+                                <option value="General Question">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom:15px;">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

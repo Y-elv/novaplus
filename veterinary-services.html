@@ -1,9 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinary Services - Novaplus Veterinary Pet Ltd</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,15 +13,19 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>Novaplus <span>Veterinary</span></h1>
-                <p>Pet Care & Supplies</p>
-            </div>
+            <a class="logo" href="index.html" aria-label="Novaplus home">
+                <img class="logo-image" src="images/logo.png" alt="Novaplus logo">
+                <div class="logo-text">
+                    <h1>Novaplus <span>Veterinary</span></h1>
+                    <p>Pet Care & Supplies</p>
+                </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="pet-shop.html">Pet Shop</a></li>
                     <li><a href="veterinary-services.html" class="active">Veterinary Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -43,16 +48,16 @@
     <section class="services-overview">
         <div class="container">
             <div class="section-intro">
-                <h2>Our Veterinary Services</h2>
-                <p>At Novaplus Veterinary, we provide a wide range of veterinary services to keep your pets healthy and happy. Our experienced veterinarians and staff are dedicated to delivering the highest standard of care in a compassionate and friendly environment.</p>
+                <h2>Home Veterinary Services</h2>
+                <p>Professional at-home pet healthcare services for diagnosis, prevention, treatment, and hygiene.</p>
             </div>
 
             <div class="services-tabs">
                 <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="preventive">Preventive Care</button>
-                    <button class="tab-btn" data-tab="medical">Medical Services</button>
-                    <button class="tab-btn" data-tab="surgical">Surgical Services</button>
-                    <button class="tab-btn" data-tab="emergency">Emergency Care</button>
+                    <button class="tab-btn active" data-tab="preventive">Consultation</button>
+                    <button class="tab-btn" data-tab="medical">Vaccination</button>
+                    <button class="tab-btn" data-tab="surgical">General Medicine</button>
+                    <button class="tab-btn" data-tab="emergency">Minor Surgery & Grooming</button>
                 </div>
                 
                 <div class="tab-content">
@@ -63,43 +68,36 @@
                                 <img src="images/preventive-care.jpg" alt="Preventive Care">
                             </div>
                             <div class="service-info">
-                                <h3>Preventive Care</h3>
-                                <p>Regular preventive care is essential for maintaining your pet's health and detecting potential issues before they become serious. Our preventive services include:</p>
+                                <h3>1. Consultation</h3>
+                                <p>Basic check-up and diagnosis visit at your home.</p>
                                 
                                 <div class="service-features">
                                     <div class="feature">
                                         <i class="fas fa-syringe"></i>
                                         <div>
-                                            <h4>Vaccinations</h4>
-                                            <p>Core and non-core vaccinations to protect against common diseases</p>
+                                            <h4>Physical Examination</h4>
+                                            <p>Temperature, heart rate, breathing checks.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-stethoscope"></i>
                                         <div>
-                                            <h4>Wellness Exams</h4>
-                                            <p>Comprehensive physical examinations to assess overall health</p>
+                                            <h4>Body Condition Checks</h4>
+                                            <p>Eyes, ears, skin, and teeth assessment.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-bug"></i>
                                         <div>
-                                            <h4>Parasite Control</h4>
-                                            <p>Prevention and treatment for fleas, ticks, heartworms, and intestinal parasites</p>
+                                            <h4>Diagnosis & Plan</h4>
+                                            <p>Symptom review, history, and treatment planning.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-tooth"></i>
                                         <div>
-                                            <h4>Dental Care</h4>
-                                            <p>Dental cleanings, oral exams, and home care recommendations</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-weight"></i>
-                                        <div>
-                                            <h4>Nutritional Counseling</h4>
-                                            <p>Personalized diet plans and nutritional advice for your pet's needs</p>
+                                            <h4>Care Advice</h4>
+                                            <p>Feeding, home care, and prevention guidance.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -116,43 +114,36 @@
                                 <img src="images/medical-services.jpg" alt="Medical Services">
                             </div>
                             <div class="service-info">
-                                <h3>Medical Services</h3>
-                                <p>When your pet is sick or injured, our veterinary team is here to provide expert medical care with compassion and expertise.</p>
+                                <h3>2. Vaccination</h3>
+                                <p>Protects pets from dangerous diseases.</p>
                                 
                                 <div class="service-features">
                                     <div class="feature">
                                         <i class="fas fa-heartbeat"></i>
                                         <div>
-                                            <h4>Diagnostics</h4>
-                                            <p>Advanced diagnostic testing including blood work, urinalysis, and digital imaging</p>
+                                            <h4>Core Vaccines</h4>
+                                            <p>Rabies, parvovirus, distemper (as needed by pet type).</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-pills"></i>
                                         <div>
-                                            <h4>Internal Medicine</h4>
-                                            <p>Diagnosis and treatment of complex medical conditions</p>
+                                            <h4>Booster Shots</h4>
+                                            <p>Continued protection based on schedule.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-allergies"></i>
                                         <div>
-                                            <h4>Dermatology</h4>
-                                            <p>Treatment for skin conditions, allergies, and ear infections</p>
+                                            <h4>Schedule Planning</h4>
+                                            <p>Custom vaccination plan for your pet.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-bone"></i>
                                         <div>
-                                            <h4>Orthopedics</h4>
-                                            <p>Care for bone, joint, and muscle conditions</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-eye"></i>
-                                        <div>
-                                            <h4>Ophthalmology</h4>
-                                            <p>Eye exams and treatment for ocular conditions</p>
+                                            <h4>Vaccination Card</h4>
+                                            <p>Issue or update your pet vaccination card.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -169,43 +160,36 @@
                                 <img src="images/surgical-services.jpg" alt="Surgical Services">
                             </div>
                             <div class="service-info">
-                                <h3>Surgical Services</h3>
-                                <p>Our state-of-the-art surgical suite and experienced veterinary surgeons ensure your pet receives the highest quality surgical care.</p>
+                                <h3>3. General Medicine</h3>
+                                <p>Treatment of common illnesses and conditions.</p>
                                 
                                 <div class="service-features">
                                     <div class="feature">
                                         <i class="fas fa-cut"></i>
                                         <div>
-                                            <h4>Spay & Neuter</h4>
-                                            <p>Routine and advanced spay/neuter procedures</p>
+                                            <h4>Common Illnesses</h4>
+                                            <p>Support for infections, fever, diarrhea, and vomiting.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-bone"></i>
                                         <div>
-                                            <h4>Soft Tissue Surgery</h4>
-                                            <p>Procedures involving skin, organs, and other soft tissues</p>
+                                            <h4>Deworming</h4>
+                                            <p>Internal parasite treatment and follow-up.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-bone"></i>
                                         <div>
-                                            <h4>Orthopedic Surgery</h4>
-                                            <p>Treatment for fractures, ligament injuries, and joint conditions</p>
+                                            <h4>Flea and Tick Care</h4>
+                                            <p>Prevention and treatment protocols.</p>
                                         </div>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-teeth"></i>
                                         <div>
-                                            <h4>Dental Surgery</h4>
-                                            <p>Tooth extractions and oral surgery procedures</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-heart"></i>
-                                        <div>
-                                            <h4>Anesthesia & Monitoring</h4>
-                                            <p>Safe anesthesia protocols and continuous monitoring during procedures</p>
+                                            <h4>Medication & Follow-up</h4>
+                                            <p>Prescription support and ongoing monitoring.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -222,35 +206,32 @@
                                 <img src="images/emergency-care.jpg" alt="Emergency Care">
                             </div>
                             <div class="service-info">
-                                <h3>Emergency Care</h3>
-                                <p>We provide emergency veterinary care during our regular business hours. For after-hours emergencies, please contact our emergency line.</p>
+                                <h3>4. Minor Surgery & 5. Grooming</h3>
+                                <p>Small procedures and hygiene services provided at home where appropriate.</p>
                                 
                                 <div class="emergency-info">
                                     <div class="emergency-contact">
-                                        <h4>Emergency Contact</h4>
-                                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                                        <p><i class="fas fa-clock"></i> Available 24/7 for existing patients</p>
+                                        <h4>Minor Surgery Includes</h4>
+                                        <p>Wound stitching, abscess drainage, small lump removal, and basic procedures.</p>
                                     </div>
                                     
                                     <div class="emergency-signs">
-                                        <h4>Signs Your Pet Needs Emergency Care:</h4>
+                                        <h4>Grooming Includes:</h4>
                                         <ul>
-                                            <li>Difficulty breathing or excessive coughing</li>
-                                            <li>Severe bleeding or trauma</li>
-                                            <li>Seizures or loss of consciousness</li>
-                                            <li>Bloated or distended abdomen</li>
-                                            <li>Inability to urinate or defecate</li>
-                                            <li>Ingestion of toxic substances</li>
-                                            <li>Sudden paralysis or inability to stand</li>
+                                            <li>Bathing and drying</li>
+                                            <li>Hair trimming or shaving</li>
+                                            <li>Nail clipping and ear cleaning</li>
+                                            <li>Brushing and de-shedding</li>
+                                            <li>Tick/flea wash (when required)</li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div class="emergency-actions">
-                                    <a href="tel:+15551234567" class="btn btn-primary">
-                                        <i class="fas fa-phone"></i> Call Emergency Line
+                                    <a href="tel:0787082975" class="btn btn-primary">
+                                        <i class="fas fa-phone"></i> Call Veterinarian
                                     </a>
-                                    <a href="#appointment" class="btn btn-secondary">Schedule Non-Emergency Visit</a>
+                                    <a href="contact.html" class="btn btn-secondary">Book Home Visit</a>
                                 </div>
                             </div>
                         </div>
@@ -519,7 +500,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+                <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="terms-of-service.html">Terms of Service</a>

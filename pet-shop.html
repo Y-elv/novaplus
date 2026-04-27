@@ -4,163 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop - Novaplus Veterinary Pet Ltd</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>Novaplus <span>Veterinary</span></h1>
-                <p>Pet Care & Supplies</p>
-            </div>
+            <a class="logo" href="index.html" aria-label="Novaplus home">
+                <img class="logo-image" src="images/logo.png" alt="Novaplus logo">
+                <div class="logo-text">
+                    <h1>Novaplus <span>Veterinary</span></h1>
+                    <p>Pet Care & Supplies</p>
+                </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="pet-shop.html" class="active">Pet Shop</a></li>
                     <li><a href="veterinary-services.html">Veterinary Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="cart-icon">
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
-            </div>
+            <div class="mobile-menu"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="margin-top: 70px; background: var(--light-gray);">
         <div class="container">
             <h1>Pet Shop</h1>
-            <p>High-quality products for your beloved pets</p>
+            <p>Everything related to feeding your pet properly, comfort, and nutrition guidance.</p>
         </div>
     </section>
 
-    <!-- Product Categories -->
-    <section class="product-categories">
+    <section>
         <div class="container">
-            <div class="category-buttons">
-                <button class="btn btn-outline active" data-category="all">All Products</button>
-                <button class="btn btn-outline" data-category="food">Food & Treats</button>
-                <button class="btn btn-outline" data-category="accessories">Accessories</button>
-                <button class="btn btn-outline" data-category="grooming">Grooming</button>
-                <button class="btn btn-outline" data-category="toys">Toys</button>
-                <button class="btn btn-outline" data-category="health">Health & Wellness</button>
+            <div class="services-grid">
+                <div class="service-card" style="text-align:left;">
+                    <h3>1. Pet Food & Wet Food</h3>
+                    <ul>
+                        <li>Dry food (kibble) for dogs, cats, and other pets</li>
+                        <li>Wet food (canned/pouches)</li>
+                        <li>Puppy and kitten food</li>
+                        <li>Adult and senior diets</li>
+                        <li>Special diets for allergies, weight, and sensitive stomach</li>
+                        <li>Treats and snacks</li>
+                    </ul>
+                    <p><strong>Benefit:</strong> Helps ensure balanced and healthy nutrition.</p>
+                </div>
+
+                <div class="service-card" style="text-align:left;">
+                    <h3>2. Pet Accessories</h3>
+                    <ul>
+                        <li>Collars, leashes, and harnesses</li>
+                        <li>Food and water bowls</li>
+                        <li>Beds and blankets</li>
+                        <li>Toys (chew toys, balls, interactive toys)</li>
+                        <li>Grooming tools</li>
+                        <li>Carriers, cages, litter boxes, and hygiene products</li>
+                    </ul>
+                    <p><strong>Benefit:</strong> Improves your pet's comfort, safety, and lifestyle.</p>
+                </div>
+
+                <div class="service-card" style="text-align:left;">
+                    <h3>3. Nutrition Advisor</h3>
+                    <ul>
+                        <li>Right food by age, breed, size, and health condition</li>
+                        <li>Feeding schedules and portion control</li>
+                        <li>Weight management advice</li>
+                        <li>Diet plans for sick pets</li>
+                        <li>Safe diet switching support</li>
+                        <li>General pet nutrition education</li>
+                    </ul>
+                    <p><strong>Benefit:</strong> Helps prevent health problems and keep pets active.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Grid -->
-    <section class="products-section">
-        <div class="container">
-            <div class="products-filter">
-                <div class="filter-group">
-                    <label for="sort-by">Sort by:</label>
-                    <select id="sort-by" class="form-control">
-                        <option value="featured">Featured</option>
-                        <option value="price-low">Price: Low to High</option>
-                        <option value="price-high">Price: High to Low</option>
-                        <option value="name-asc">Name: A to Z</option>
-                        <option value="name-desc">Name: Z to A</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="show">Show:</label>
-                    <select id="show" class="form-control">
-                        <option value="12">12 per page</option>
-                        <option value="24">24 per page</option>
-                        <option value="36">36 per page</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="products-grid" id="products-container">
-                <!-- Products will be loaded via JavaScript -->
-            </div>
-
-            <div class="pagination">
-                <button class="btn btn-outline" id="prev-page">Previous</button>
-                <div class="page-numbers" id="page-numbers">
-                    <!-- Page numbers will be added by JavaScript -->
-                </div>
-                <button class="btn btn-outline" id="next-page">Next</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h3>Subscribe to Our Newsletter</h3>
-                <p>Get the latest updates on new products and upcoming sales</p>
-                <form id="newsletter-form" class="newsletter-form">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Novaplus Veterinary</h3>
-                    <p>Your trusted partner in pet care and veterinary services.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pet-shop.html">Pet Shop</a></li>
-                        <li><a href="veterinary-services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Shop Categories</h3>
-                    <ul>
-                        <li><a href="pet-shop.html?category=food">Food & Treats</a></li>
-                        <li><a href="pet-shop.html?category=accessories">Accessories</a></li>
-                        <li><a href="pet-shop.html?category=toys">Toys</a></li>
-                        <li><a href="pet-shop.html?category=grooming">Grooming</a></li>
-                        <li><a href="pet-shop.html?category=health">Health & Wellness</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Pet Care St, City, Country</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
-                    <p><i class="fas fa-envelope"></i> shop@novaplusvet.com</p>
-                    <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Novaplus Veterinary Pet Ltd. All rights reserved.</p>
-                <div class="payment-methods">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-apple-pay"></i>
-                </div>
+                <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+                <p>Shop Tel: 0788407116</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/pet-shop.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
