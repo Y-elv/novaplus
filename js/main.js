@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Global toast helper for success/error messages across pages.
+    if (!window.showToast) {
+        window.showToast = function(message, type = 'success') {
+            let container = document.querySelector('.toast-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'toast-container';
+                document.body.appendChild(container);
+            }
+
+            const toast = document.createElement('div');
+            toast.className = `toast-message toast-${type}`;
+            toast.textContent = message;
+            container.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.classList.add('visible');
+            });
+
+            window.setTimeout(() => {
+                toast.classList.remove('visible');
+                window.setTimeout(() => toast.remove(), 260);
+            }, 2800);
+        };
+    }
+
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu');
     const nav = document.querySelector('nav');
@@ -95,6 +121,30 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.textContent = String(currentYear);
     });
 
+    // Keep social links consistent on all pages.
+    const socialProfiles = {
+        facebook: 'https://www.facebook.com/novaplus_pet_shop',
+        instagram: 'https://www.instagram.com/novaplus_pet_shop',
+        twitter: 'https://x.com/novaplus_pet_shop'
+    };
+    document.querySelectorAll('.social-links a').forEach((link) => {
+        const icon = link.querySelector('i');
+        if (!icon) return;
+
+        if (icon.classList.contains('fa-facebook')) {
+            link.href = socialProfiles.facebook;
+            link.setAttribute('aria-label', 'Novaplus Pet Shop on Facebook');
+        } else if (icon.classList.contains('fa-instagram')) {
+            link.href = socialProfiles.instagram;
+            link.setAttribute('aria-label', 'Novaplus Pet Shop on Instagram');
+        } else if (icon.classList.contains('fa-twitter')) {
+            link.href = socialProfiles.twitter;
+            link.setAttribute('aria-label', 'Novaplus Pet Shop on X');
+        }
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+    });
+
     // Sticky header on scroll
     const header = document.querySelector('header');
     let lastScroll = 0;
@@ -158,21 +208,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sample testimonials data
     const testimonials = [
-        {
-            text: "Novaplus Veterinary has been taking care of my pets for years. Their team is professional and caring. Highly recommended!",
-            author: "Sarah Johnson",
-            rating: 5
-        },
-        {
-            text: "The pet shop has everything I need for my three dogs. Great quality products and the staff is very knowledgeable.",
-            author: "Michael Brown",
-            rating: 5
-        },
-        {
-            text: "The vets here are amazing! They treated my cat with such care and the follow-up was excellent.",
-            author: "Emily Davis",
-            rating: 5
-        }
+      {
+        text: "Novaplus Veterinary has been taking care of my pets for years. Their team is professional and caring. Highly recommended!",
+        author: "Aliete Umurerwa",
+        rating: 5,
+      },
+      {
+        text: "The pet shop has everything I need for my three dogs. Great quality products and the staff is very knowledgeable.",
+        author: "Kamanzi David",
+        rating: 5,
+      },
+      {
+        text: "The vets here are amazing! They treated my cat with such care and the follow-up was excellent.",
+        author: "Emily Biremeye",
+        rating: 5,
+      },
     ];
 
     // Load featured products
@@ -389,21 +439,6 @@ function validateAppointmentForm() {
 
 // Add event listeners when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.onsubmit = function(e) {
-            if (!validateForm()) {
-                e.preventDefault();
-                return false;
-            }
-            // Form would be submitted here in a real app
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-            return false;
-        };
-    }
-    
     // Appointment form submission
     const appointmentForm = document.getElementById('appointment-form');
     if (appointmentForm) {

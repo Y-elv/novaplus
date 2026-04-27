@@ -43,7 +43,7 @@
 
     <section>
         <div class="container">
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;">
+            <div class="contact-grid">
                 <div class="service-card" style="text-align:left;">
                     <h3>Our Contacts</h3>
                     <p><strong>Pet Shop Tel:</strong> 0788407116</p>
@@ -57,7 +57,7 @@
 
                 <div class="service-card" style="text-align:left;">
                     <h3>Send Us a Message</h3>
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://formsubmit.co/mugishaelvis456@gmail.com" method="POST">
                         <div class="form-group" style="margin-bottom:12px;">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required style="width:100%;padding:10px;">
@@ -83,6 +83,7 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px;"></textarea>
                         </div>
+                        <input type="hidden" name="_captcha" value="false">
                         <button type="submit" class="btn btn-primary">Send</button>
                     </form>
                 </div>
@@ -92,6 +93,38 @@
 
     <footer>
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Novaplus Veterinary</h3>
+                    <p>Your trusted partner in pet care and veterinary services.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on X"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pet-shop.html">Pet Shop</a></li>
+                        <li><a href="veterinary-services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> KG 1 AVE, Chez Lando - Sonatube (Near Polyclinic de l'etoile)</p>
+                    <p><i class="fas fa-phone"></i> Shop: 0788407116</p>
+                    <p><i class="fas fa-phone"></i> Veterinarian: 0787082975</p>
+                    <p><i class="fas fa-envelope"></i> info@novaplusvet.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Daily: 09:00 AM - 08:00 PM</p>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
             </div>

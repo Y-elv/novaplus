@@ -388,6 +388,12 @@ nav ul li a.active::after {
     margin-bottom: 10px;
 }
 
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
 /* Testimonials */
 .testimonials {
     background-color: var(--light-gray);
@@ -456,6 +462,8 @@ footer {
     color: #bdc3c7;
     margin-bottom: 10px;
     display: block;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .footer-section a:hover {
@@ -465,11 +473,13 @@ footer {
 
 .social-links {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .social-links a {
     display: inline-block;
-    margin-right: 15px;
     font-size: 1.5rem;
     color: #bdc3c7;
     transition: var(--transition);
@@ -649,11 +659,34 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .gallery-grid,
+    .gallery-video-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
     .service-card,
     .product-info,
     .gallery-copy {
         padding-left: 18px;
         padding-right: 18px;
+    }
+
+    .gallery-card {
+        border-radius: 12px;
+    }
+
+    .gallery-image {
+        min-height: 200px;
+    }
+
+    .footer-section {
+        padding: 0 4px;
     }
 
     .cta-buttons .btn {
@@ -690,4 +723,41 @@ footer {
 
 body.menu-open {
     overflow: hidden;
+}
+
+.toast-container {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2500;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.toast-message {
+    min-width: 220px;
+    max-width: min(90vw, 360px);
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    transform: translateY(12px);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toast-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-success {
+    background: #2f9e44;
+}
+
+.toast-error {
+    background: #d9480f;
 }

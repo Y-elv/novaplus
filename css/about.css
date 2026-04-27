@@ -630,6 +630,21 @@
     .milestone {
         min-width: 100%;
     }
+
+    .story-image,
+    .story-text {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .story-content {
+        gap: 20px;
+    }
+
+    .testimonial {
+        margin: 0;
+        padding: 22px 16px;
+    }
     
     .team-grid {
         grid-template-columns: 1fr;
