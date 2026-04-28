@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Novaplus Veterinary Pet Ltd</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .all-products-header {
+            margin-top: 70px;
+            background: var(--light-gray);
+            text-align: center;
+            padding: 70px 0 50px;
+        }
+
+        .all-products-header p {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .products-toolbar {
+            margin: 30px 0 24px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-wrap {
+            width: 100%;
+            max-width: 680px;
+            position: relative;
+        }
+
+        .search-wrap i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+        }
+
+        .products-search {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 999px;
+            padding: 12px 18px 12px 40px;
+            font: inherit;
+            color: var(--text-color);
+            background: #fff;
+            transition: var(--transition);
+        }
+
+        .products-search:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.12);
+        }
+
+        .all-products-list {
+            background: #f8fafc;
+        }
+
+        .all-products-list .products-grid {
+            margin-bottom: 0;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-image {
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--secondary-color);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .product-description {
+            margin: 0;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 8px 0;
+            font-size: 0.9rem;
+            color: #374151;
+            gap: 12px;
+        }
+
+        .product-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .product-info .btn {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .products-pagination {
+            margin-top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-indicator {
+            color: #4b5563;
+            min-width: 90px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .no-products {
+            text-align: center;
+            grid-column: 1 / -1;
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 992px) {
+            .all-products-list .products-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .all-products-list .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Novaplus home">
+                <img class="logo-image" src="images/logo.png" alt="Novaplus logo">
+                <div class="logo-text">
+                    <h1>Novaplus <span>Veterinary</span></h1>
+                    <p>Pet Care & Supplies</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pet-shop.html">Pet Shop</a></li>
+                    <li><a href="all-products.html" class="active">All Products</a></li>
+                    <li><a href="veterinary-services.html">Veterinary Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="all-products-header">
+        <div class="container">
+            <h1>All Products</h1>
+            <p>Browse our full pet shop selection with trusted essentials for nutrition, hygiene, comfort, and daily care.</p>
+        </div>
+    </section>
+
+    <section class="all-products-list">
+        <div class="container">
+            <div class="products-toolbar">
+                <div class="search-wrap">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input
+                        id="products-search"
+                        class="products-search"
+                        type="search"
+                        placeholder="Search products by name or category..."
+                        aria-label="Search products"
+                    >
+                </div>
+            </div>
+
+            <div id="all-products-grid" class="products-grid">
+                <!-- Products are rendered by js/main.js -->
+            </div>
+
+            <div class="products-pagination">
+                <button id="products-prev" class="btn btn-outline" type="button">Previous</button>
+                <span id="products-page-info" class="page-indicator">Page 1</span>
+                <button id="products-next" class="btn btn-primary" type="button">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Novaplus Veterinary</h3>
+                    <p>Your trusted partner in pet care and veterinary services.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on X"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pet-shop.html">Pet Shop</a></li>
+                        <li><a href="all-products.html">All Products</a></li>
+                        <li><a href="veterinary-services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> KG 1 AVE, Chez Lando - Sonatube (Near Polyclinic de l'etoile)</p>
+                    <p><i class="fas fa-phone"></i> Shop: 0788407116</p>
+                    <p><i class="fas fa-phone"></i> Veterinarian: 0787082975</p>
+                    <p><i class="fas fa-envelope"></i> petshopNovaplus@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Daily: 09:00 AM - 08:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -284,7 +284,6 @@ function displayProducts() {
                     ${starsHTML}
                     <span>(${product.rating})</span>
                 </div>
-                <div class="price">$${product.price.toFixed(2)}</div>
                 <button class="btn btn-primary add-to-cart" data-id="${product.id}" ${!product.inStock ? 'disabled' : ''}>
                     ${product.inStock ? 'Add to Cart' : 'Out of Stock'}
                 </button>
@@ -505,11 +504,8 @@ function updateCartCount() {
 // View product details
 function viewProductDetails(e) {
     const productId = parseInt(e.target.dataset.id);
-    // In a real app, this would navigate to a product detail page
-    // For now, we'll just show an alert
-    const product = products.find(p => p.id === productId);
-    if (product) {
-        alert(`Viewing details for: ${product.name}\nPrice: $${product.price.toFixed(2)}\nCategory: ${formatCategory(product.category)}`);
+    if (!Number.isNaN(productId)) {
+        window.location.href = `view-product.html?id=${productId}`;
     }
 }
 

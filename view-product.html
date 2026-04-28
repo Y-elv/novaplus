@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Product - Novaplus Veterinary Pet Ltd</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-view-section {
+            margin-top: 70px;
+            background: #f8fafc;
+            min-height: 70vh;
+        }
+
+        .product-view-wrap {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .product-view-image {
+            background: #fff;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .product-view-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .product-view-content .category {
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .product-view-title {
+            margin-bottom: 12px;
+        }
+
+        .product-view-copy {
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .product-highlights {
+            list-style: none;
+            margin: 0 0 24px;
+            padding: 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        .product-highlights li {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-highlights i {
+            color: var(--primary-color);
+        }
+
+        .product-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .product-view-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .product-view-image img {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Novaplus home">
+                <img class="logo-image" src="images/logo.png" alt="Novaplus logo">
+                <div class="logo-text">
+                    <h1>Novaplus <span>Veterinary</span></h1>
+                    <p>Pet Care & Supplies</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pet-shop.html">Pet Shop</a></li>
+                    <li><a href="all-products.html" class="active">All Products</a></li>
+                    <li><a href="veterinary-services.html">Veterinary Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="product-view-section">
+        <div class="container">
+            <div class="product-view-wrap" id="product-view-wrap">
+                <div class="product-view-image">
+                    <img id="product-image" src="images/placeholder.jpg" alt="Product image">
+                </div>
+                <div class="product-view-content">
+                    <span id="product-category" class="category"></span>
+                    <h1 id="product-name" class="product-view-title">Product</h1>
+                    <p id="product-description" class="product-view-copy"></p>
+                    <ul class="product-highlights" id="product-highlights"></ul>
+                    <div class="product-actions">
+                        <a href="all-products.html" class="btn btn-primary">Back to All Products</a>
+                        <a href="contact.html" class="btn btn-outline">Order via Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Novaplus Veterinary</h3>
+                    <p>Your trusted partner in pet care and veterinary services.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/novaplus_pet_shop" target="_blank" rel="noopener noreferrer" aria-label="Novaplus Pet Shop on X"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pet-shop.html">Pet Shop</a></li>
+                        <li><a href="all-products.html">All Products</a></li>
+                        <li><a href="veterinary-services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> KG 1 AVE, Chez Lando - Sonatube (Near Polyclinic de l'etoile)</p>
+                    <p><i class="fas fa-phone"></i> Shop: 0788407116</p>
+                    <p><i class="fas fa-phone"></i> Veterinarian: 0787082975</p>
+                    <p><i class="fas fa-envelope"></i> petshopNovaplus@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Daily: 09:00 AM - 08:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year"></span> Novaplus Veterinary Pet Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const productData = {
+            1: { name: 'Premium Dog Food', category: 'Food & Treats', image: 'images/premium%20dog%20food%20.png' },
+            2: { name: 'Cat Litter Box', category: 'Accessories', image: 'images/cart%20little%20box%20.jpg' },
+            3: { name: 'Dog Leash', category: 'Collars & Leashes', image: 'images/dog%20leash.avif' },
+            4: { name: 'Pet Grooming Kit', category: 'Grooming', image: 'images/grooming%20kit.avif' },
+            5: { name: 'First Aid Kit', category: 'Accessories', image: 'images/first%20aid%20kit.jpeg' },
+            6: { name: 'Pet Food Plate', category: 'Accessories', image: 'images/pet%20food%20plate.jpeg' },
+            7: { name: 'Josera Pet Food', category: 'Food & Treats', image: 'images/josera%20pet%20food%20.jpeg' },
+            8: { name: 'Track & Tail Rope Leash', category: 'Collars & Leashes', image: 'images/Track%20%26%20Tail%20Rope%20Dog%20Leash.jpeg' },
+            9: { name: 'Pet Soft & Comfy Padded Polyester Belt', category: 'Collars & Leashes', image: 'images/pet%20soft%20&%20comfy%20padded%20polyester%20belt.jpeg' },
+            10: { name: 'Chewing Toy', category: 'Accessories', image: 'images/chewing%20toy.jpeg' },
+            11: { name: 'Pet Shampoo', category: 'Grooming', image: 'images/pet%20shampo.jpeg' },
+            12: { name: 'Bravo Active Food', category: 'Food & Treats', image: 'images/bravo%20active%20food%20.jpeg' },
+            13: { name: 'Cat Food and Water Bowl', category: 'Accessories', image: 'images/Cat%20Food%20and%20Water%20Bowl%20Set.jpeg' },
+            14: { name: 'Chalesco Rope Tire Toy', category: 'Accessories', image: 'images/chalesco%20rope%20tire%20toy.jpeg' },
+            15: { name: 'Pet Ball Toy', category: 'Accessories', image: 'images/pet%20ball%20toy.png' },
+            16: { name: 'Classic Adult Dog Food', category: 'Food & Treats', image: 'images/classic%20adult%20dog%20food.jpeg' },
+            17: { name: 'Classic Kitten Food', category: 'Food & Treats', image: 'images/classic%20kitten%20food%20.jpeg' },
+            18: { name: 'Foam Fitness Training Ring', category: 'Accessories', image: 'images/foam%20fitness%20training%20ring.jpeg' },
+            19: { name: 'Gromming Gloves', category: 'Grooming', image: 'images/gromming%20gloves.jpeg' },
+            20: { name: 'Josi Pet Food', category: 'Food & Treats', image: 'images/josi%20pet%20food%20.jpeg' },
+            21: { name: 'Pet Bag', category: 'Accessories', image: 'images/pet%20bag.jpeg' },
+            22: { name: 'Pet Beds', category: 'Accessories', image: 'images/pet%20beds.jpeg' },
+            23: { name: 'Pet Brushes', category: 'Grooming', image: 'images/pet%20brushes.jpeg' },
+            24: { name: 'Pet Chest Holder', category: 'Accessories', image: 'images/pet%20chest%20holder.jpeg' },
+            25: { name: 'Pet Cone', category: 'Accessories', image: 'images/pet%20cone.jpeg' },
+            26: { name: 'Pet Nail Clipper', category: 'Grooming', image: 'images/pet%20nail%20clipper.jpeg' },
+            27: { name: 'Royal Cannin Food', category: 'Food & Treats', image: 'images/Royal%20Cannin%20Puppy.jpeg' },
+            28: { name: 'WEPO Throwing Ball', category: 'Accessories', image: 'images/WEPO%20Throwing%20Ball%20for%20Dogs.jpeg' }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+        const product = productData[productId];
+
+        if (product) {
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-category').textContent = product.category;
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-image').alt = product.name;
+            document.getElementById('product-description').textContent = `${product.name} is available in our ${product.category} collection and selected for everyday pet care support.`;
+
+            const highlightsEl = document.getElementById('product-highlights');
+            const highlights = [
+                'Trusted quality from our pet shop',
+                'Suitable for routine pet care use',
+                'Order and availability support via contact'
+            ];
+            highlights.forEach((item) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check-circle"></i>${item}`;
+                highlightsEl.appendChild(li);
+            });
+        } else {
+            document.getElementById('product-name').textContent = 'Product Not Found';
+            document.getElementById('product-description').textContent = 'The product you requested is unavailable right now. Please return to the products page.';
+            document.getElementById('product-category').textContent = 'Unavailable';
+            document.getElementById('product-image').style.opacity = '0.5';
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
