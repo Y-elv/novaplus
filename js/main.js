@@ -133,6 +133,119 @@ document.addEventListener("DOMContentLoaded", function () {
     link.setAttribute("rel", "noopener noreferrer");
   });
 
+  // Floating WhatsApp quick actions (shown on all pages)
+  const whatsappStyleId = "whatsapp-float-styles";
+  if (!document.getElementById(whatsappStyleId)) {
+    const style = document.createElement("style");
+    style.id = whatsappStyleId;
+    style.textContent = `
+      .whatsapp-float {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 1200;
+      }
+      .whatsapp-main-btn {
+        width: 58px;
+        height: 58px;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #25d366;
+        color: #fff;
+        font-size: 1.7rem;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      }
+      .whatsapp-menu {
+        position: absolute;
+        right: 0;
+        bottom: 72px;
+        min-width: 250px;
+        padding: 10px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+        border: 1px solid #e5e7eb;
+        display: none;
+      }
+      .whatsapp-menu.open {
+        display: block;
+      }
+      .whatsapp-action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #111827;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .whatsapp-action:hover {
+        background: #f3f4f6;
+      }
+      .whatsapp-action i {
+        color: #25d366;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  const whatsappWidget = document.createElement("div");
+  whatsappWidget.className = "whatsapp-float";
+  whatsappWidget.innerHTML = `
+    <div class="whatsapp-menu" id="whatsapp-menu">
+      <a
+        class="whatsapp-action"
+        href="https://wa.me/250788407116"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat for shop services"
+      >
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span>Shop - 0788407116</span>
+      </a>
+      <a
+        class="whatsapp-action"
+        href="https://wa.me/250787082975"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat for home veterinary services"
+      >
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span>Home Veterinary Services - 0787082975</span>
+      </a>
+    </div>
+    <button
+      type="button"
+      class="whatsapp-main-btn"
+      id="whatsapp-main-btn"
+      aria-label="Open WhatsApp contacts"
+      aria-expanded="false"
+      aria-controls="whatsapp-menu"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </button>
+  `;
+  document.body.appendChild(whatsappWidget);
+
+  const whatsappMainBtn = document.getElementById("whatsapp-main-btn");
+  const whatsappMenu = document.getElementById("whatsapp-menu");
+  if (whatsappMainBtn && whatsappMenu) {
+    whatsappMainBtn.addEventListener("click", () => {
+      const willOpen = !whatsappMenu.classList.contains("open");
+      whatsappMenu.classList.toggle("open", willOpen);
+      whatsappMainBtn.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!whatsappWidget.contains(event.target)) {
+        whatsappMenu.classList.remove("open");
+        whatsappMainBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   // Sticky header on scroll
   const header = document.querySelector("header");
   let lastScroll = 0;
@@ -367,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sample testimonials data
   const testimonials = [
     {
-      text: "Novaplus Veterinary has been taking care of my pets for years. Their team is professional and caring. Highly recommended!",
+      text: "Novaplus veterinary Pet Ltd has been taking care of my pets for years. Their team is professional and caring. Highly recommended!",
       author: "Aliete Umurerwa",
       rating: 5,
     },
@@ -385,7 +498,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load featured products
   function loadFeaturedProducts() {
-    const productsGrid = document.querySelector(".featured-products .products-grid");
+    const productsGrid = document.querySelector(
+      ".featured-products .products-grid",
+    );
     if (!productsGrid) return;
 
     // Clear loading content if any
@@ -417,7 +532,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("products-prev");
     const nextButton = document.getElementById("products-next");
     const pageInfo = document.getElementById("products-page-info");
-    if (!productsGrid || !searchInput || !prevButton || !nextButton || !pageInfo) return;
+    if (
+      !productsGrid ||
+      !searchInput ||
+      !prevButton ||
+      !nextButton ||
+      !pageInfo
+    )
+      return;
 
     const pageSize = 9;
     let currentPage = 1;
@@ -425,14 +547,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function renderAllProducts() {
       productsGrid.innerHTML = "";
-      const totalPages = Math.max(1, Math.ceil(filteredProducts.length / pageSize));
+      const totalPages = Math.max(
+        1,
+        Math.ceil(filteredProducts.length / pageSize),
+      );
       if (currentPage > totalPages) currentPage = totalPages;
 
       const start = (currentPage - 1) * pageSize;
       const pageItems = filteredProducts.slice(start, start + pageSize);
 
       if (pageItems.length === 0) {
-        productsGrid.innerHTML = '<div class="no-products">No products found for your search.</div>';
+        productsGrid.innerHTML =
+          '<div class="no-products">No products found for your search.</div>';
       } else {
         pageItems.forEach((product) => {
           const card = document.createElement("article");
@@ -481,7 +607,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     nextButton.addEventListener("click", () => {
-      const totalPages = Math.max(1, Math.ceil(filteredProducts.length / pageSize));
+      const totalPages = Math.max(
+        1,
+        Math.ceil(filteredProducts.length / pageSize),
+      );
       if (currentPage < totalPages) {
         currentPage += 1;
         renderAllProducts();
